@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: contaspagar-api
+    runtime: python
+    plan: starter
+    numInstances: 1
+    buildCommand: pip install -r server/requirements.txt
+    startCommand: python -m uvicorn server.api:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /health
+    disk:
+      name: contaspagar-dados
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.12
+      - key: TZ
+        value: America/Sao_Paulo
+      - key: CONTASPAGAR_SERVER_DIR
+        value: /var/data/contaspagar
+      - key: CONTASPAGAR_ADMIN_EMAIL
+        sync: false
+      - key: CONTASPAGAR_ADMIN_PASSWORD
+        sync: false

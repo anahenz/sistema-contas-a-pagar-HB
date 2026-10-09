@@ -1,0 +1,21 @@
+INSTALACAO AUTOMATICA
+
+1. Extraia todo o ZIP.
+2. Feche o ContasPagar se estiver aberto.
+3. Abra INSTALAR.bat com dois cliques.
+4. Aguarde a mensagem de conclusao. Depois use o atalho ContasPagar na area de trabalho.
+
+Nao precisa digitar comandos nem abrir VS Code. Requer internet.
+O instalador usa Python 3.11 a 3.13 de 64 bits. Se necessario, tenta instalar Python 3.13 pelo winget do Windows. Se o winget nao estiver disponivel, mostra orientacao.
+Instala para o usuario atual, em LOCALAPPDATA/Programs/ContasPagar.
+Preserva o banco de dados existente em LOCALAPPDATA/ContasPagar.
+Cada instalacao usa uma pasta separada; nao apaga a instalacao anterior.
+Logs ficam em LOCALAPPDATA/ContasPagar/logs.
+
+Este pacote configura o aplicativo Python. Nao e um EXE pre-compilado.
+O fluxo completo de instalacao precisa ser validado no Windows.
+
+VERSAO 2.0 - EQUIPE ONLINE
+Depois da instalacao, escolha Equipe online e informe a URL HTTPS do servidor e seu login.
+O servidor precisa ser publicado primeiro: veja docs/HOSPEDAR_RENDER.md.
+O pacote ainda nao esta hospedado. Para continuar com sua base antiga, escolha Somente neste computador.

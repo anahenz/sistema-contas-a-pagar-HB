@@ -1,0 +1,37 @@
+VERSAO 2.0
+Feche o aplicativo antigo pelo menu Sair da bandeja e execute INSTALAR.bat do novo pacote.
+A base local e preservada. A equipe online exige publicar o servidor e importar o backup explicitamente.
+Consulte docs/HOSPEDAR_RENDER.md.
+
+INSTRUCOES ANTERIORES PARA ATUALIZACAO MANUAL:
+CONTASPAGAR 1.1 — ATUALIZAR A VERSÃO ANTERIOR
+
+1. Feche o aplicativo por Sair no ícone da bandeja, ao lado do relógio.
+   Fechar apenas o X pode deixá-lo em segundo plano.
+2. Extraia este ZIP em uma pasta temporária.
+3. Abra a pasta ContasPagar que veio no ZIP.
+4. Copie TODO o conteúdo dessa pasta para dentro da sua pasta ContasPagar antiga.
+5. Quando o Windows perguntar, escolha substituir os arquivos com o mesmo nome.
+6. Abra iniciar.bat na pasta antiga.
+
+A pasta .venv já instalada permanece no local. Não precisa reinstalar as
+bibliotecas para esta atualização. O banco de dados permanece em
+%LOCALAPPDATA%\ContasPagar e continua sendo utilizado pela nova versão.
+
+Se preferir pelo VS Code, abra o terminal na pasta antiga e execute:
+.\.venv\Scripts\python.exe main.py
+
+A versão 1.1.0 aparece no rodapé do menu lateral.
+
+Se você usa um executável .exe, precisa gerar novamente com gerar_exe.bat e
+instalar/copiar o novo .exe; atualizar os arquivos Python não altera um .exe antigo.
+
+MUDANÇAS
+- Cadastros, edição, detalhes e pagamento dentro da janela principal.
+- Formulários com seções, duas colunas e botões sempre visíveis no rodapé.
+- Cadastro auxiliar volta à conta mantendo os dados já preenchidos.
+- Validação mostra a mensagem dentro do formulário.
+- Proteção ao trocar de seção com informações ainda não salvas.
+- Tema claro explícito, incluindo calendário, campos de data e listas.
+- Calendário com mês, ano, anterior, próximo e botão Hoje.
+- Histórico com filtros de período reorganizados.
